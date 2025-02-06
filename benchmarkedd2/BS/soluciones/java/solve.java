@@ -27,13 +27,13 @@ public class solve {
         long tiempoEjecucion = endTime - startTime;
 
         // Imprimimos en consola
-        System.out.println("La suma de los primeros " + n + " términos de Fibonacci es: " + resultado);
+        //System.out.println("La suma de los primeros " + n + " términos de Fibonacci es: " + resultado);
         System.out.println("Tiempo de ejecución: " + tiempoEjecucion + " ms");
 
         // Escribimos los resultados en un archivo de texto
         try (FileWriter writer = new FileWriter("output.txt")) {
-            writer.write("La suma de los primeros " + n + " términos de Fibonacci es: " + resultado + "\n");
-            writer.write("Tiempo de ejecución: " + tiempoEjecucion + " ms\n");
+            writer.write(resultado + "\n");
+            //writer.write("Tiempo de ejecución: " + tiempoEjecucion + " ms\n");
         } catch (IOException e) {
             System.err.println("Error al escribir en el archivo: " + e.getMessage());
         }
