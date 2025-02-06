@@ -34,15 +34,15 @@ namespace SumaFibonacci
             long tiempoTranscurridoMs = stopwatch.ElapsedMilliseconds;
 
             // Mostramos en consola
-            Console.WriteLine($"La suma de los primeros 10,000 números de Fibonacci es: {suma}");
+            //Console.WriteLine($"La suma de los primeros 10,000 números de Fibonacci es: {suma}");
             Console.WriteLine($"Tiempo transcurrido: {tiempoTranscurridoMs} ms");
 
             // Escribimos los resultados en un archivo de texto
             string rutaArchivo = "output.txt";
             using (StreamWriter writer = new StreamWriter(rutaArchivo))
             {
-                writer.WriteLine($"La suma de los primeros 10,000 números de Fibonacci es: {suma}");
-                writer.WriteLine($"Tiempo transcurrido: {tiempoTranscurridoMs} ms");
+                writer.WriteLine($" {suma}");
+                //writer.WriteLine($"Tiempo transcurrido: {tiempoTranscurridoMs} ms");
             }
 
             Console.WriteLine($"\nResultados guardados en el archivo '{rutaArchivo}'.");
