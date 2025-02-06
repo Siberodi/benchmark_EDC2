@@ -29,12 +29,12 @@ const endTime = Date.now();
 const tiempoTranscurrido = endTime - startTime;
 
 // Mostramos la información en consola
-console.log(`La suma de los primeros ${n} términos de Fibonacci es:\n${resultado.toString()}`);
+//console.log(`La suma de los primeros ${n} términos de Fibonacci es:\n${resultado.toString()}`);
 console.log(`Tiempo transcurrido: ${tiempoTranscurrido} ms`);
 
 // Preparamos el contenido del archivo
 const contenidoArchivo = 
-`La suma de los primeros ${n} términos de Fibonacci es: ${resultado.toString()}
+`${resultado.toString()}
 Tiempo transcurrido: ${tiempoTranscurrido} ms`;
 
 // Escribimos el contenido en un archivo .txt
