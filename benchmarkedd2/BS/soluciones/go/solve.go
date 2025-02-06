@@ -35,7 +35,7 @@ func main() {
     duracion := time.Since(inicio).Milliseconds()
 
     // Imprimimos la suma total en consola
-    fmt.Printf("La suma de los primeros 10,000 números de Fibonacci es: %s\n", suma.String())
+    //fmt.Printf("La suma de los primeros 10,000 números de Fibonacci es: %s\n", suma.String())
     fmt.Printf("Tiempo transcurrido: %d ms\n", duracion)
 
     // Crear (o sobrescribir) el archivo de salida
@@ -46,14 +46,14 @@ func main() {
     defer file.Close()
 
     // Escribimos en el archivo la suma y el tiempo de ejecución
-    _, err = fmt.Fprintf(file, "La suma de los primeros 10,000 números de Fibonacci es: %s\n", suma.String())
+    _, err = fmt.Fprintf(file, suma.String())
     if err != nil {
         log.Fatalf("Error escribiendo en el archivo: %v", err)
     }
 
-    _, err = fmt.Fprintf(file, "Tiempo transcurrido: %d ms\n", duracion)
-    if err != nil {
-        log.Fatalf("Error escribiendo en el archivo: %v", err)
-    }
+    //_, err = fmt.Fprintf(file, "Tiempo transcurrido: %d ms\n", duracion)
+    //if err != nil {
+        //log.Fatalf("Error escribiendo en el archivo: %v", err)
+    //}
 }
 
